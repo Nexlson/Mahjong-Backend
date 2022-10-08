@@ -8,4 +8,7 @@
 ## Tech Stack 
 - Rust
 - Rocket
+- Diesel (ORM)
+- PostgresSQL (DB)
 - React (FrontEnd)
+- Docker

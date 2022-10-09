@@ -1,0 +1,18 @@
+[package]
+name = "mahjong-game-service"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0.144"
+dotenvy = "0.15"
+
+[dependencies.diesel]
+version = "2.0.0"
+features = ["postgres"]
+
+[dependencies.rocket]
+version = "0.5.0-rc.2"
+features = ["json"]

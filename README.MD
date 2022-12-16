@@ -15,7 +15,6 @@
 - Diesel (ORM)
 - SQLite3
 - Docker
-- React (FrontEnd)
 
 ## Service Sturcture
 

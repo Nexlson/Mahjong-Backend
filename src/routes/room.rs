@@ -14,7 +14,6 @@ pub struct JoinGameData {
     room_id: String
 }
 
-
 // Create a game 
 #[post("/creategame", format="json", data="<create_game_data>")]
 pub fn create_game(create_game_data: Json<CreateGameData>) -> Value{

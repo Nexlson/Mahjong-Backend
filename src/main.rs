@@ -3,6 +3,9 @@
 use rocket::Request;
 
 mod routes;
+mod utils;
+mod models;
+mod schema;
 
 // index page
 #[get("/")]
@@ -25,7 +28,8 @@ fn unprocessable_entity() -> String {
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![index])
-        .mount("/game", routes![routes::game::next_round])
-        .mount("/room", routes![routes::room::create_game, routes::room::join_game])
+        .mount("/round", routes![routes::round::create_game_round])
+        .mount("/room", routes![routes::room::create_game_room, routes::room::join_game_room])
+        .mount("/player", routes![routes::player::create_game_player])
         .register("/", catchers![not_found_page, unprocessable_entity])
 }

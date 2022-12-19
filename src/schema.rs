@@ -5,17 +5,19 @@ diesel::table! {
         id -> Nullable<Integer>,
         nickname -> Text,
         host -> Integer,
-        score -> Nullable<Integer>,
+        score -> Integer,
+        active -> Integer,
     }
 }
 
 diesel::table! {
     room (id) {
         id -> Nullable<Integer>,
-        player_one -> Nullable<Integer>,
+        player_one -> Integer,
         player_two -> Nullable<Integer>,
         player_three -> Nullable<Integer>,
         player_four -> Nullable<Integer>,
+        players -> Integer,
     }
 }
 
@@ -24,7 +26,8 @@ diesel::table! {
         id -> Nullable<Integer>,
         winning_player -> Nullable<Integer>,
         losing_player -> Nullable<Integer>,
-        room_id -> Nullable<Integer>,
+        room_id -> Integer,
+        active -> Integer,
     }
 }
 

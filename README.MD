@@ -19,3 +19,5 @@
 ## Service Sturcture
 
 <img src="./diagram.svg">
+
+## Getting started

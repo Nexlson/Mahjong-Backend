@@ -1,6 +1,3 @@
-// pub mod models;
-// pub mod schema;
-
 use diesel::prelude::*;
 use dotenvy::dotenv;
 use std::env;
@@ -74,7 +71,7 @@ pub fn join_room(conn: &mut SqliteConnection, room_id:i32, player_id: i32) -> us
         .set(player_three.eq(player_id))
         .execute(conn)
         .expect("Error joining room")
-    } else if (number_of_player == 3) {
+    } else if number_of_player == 3 {
         diesel::update(room.filter(id.eq(room_id)))
         .set(player_four.eq(player_id))
         .execute(conn)

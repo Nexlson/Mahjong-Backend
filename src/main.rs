@@ -28,7 +28,7 @@ fn unprocessable_entity() -> String {
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![index])
-        .mount("/round", routes![routes::round::create_game_round])
+        .mount("/round", routes![routes::round::create_game_round, routes::round::get_game_summary])
         .mount("/room", routes![routes::room::create_game_room, routes::room::join_game_room])
         .mount("/player", routes![routes::player::create_game_player])
         .register("/", catchers![not_found_page, unprocessable_entity])

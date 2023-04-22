@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 serde = "1.0.144"
 dotenvy = "0.15"
+itertools = "0.10.5"
 
 [dependencies.diesel]
 version = "2.0.0"

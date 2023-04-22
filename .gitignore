@@ -1,0 +1,10 @@
+# remove dependencies
+/target
+
+# remove sqlite file
+*.sqlite
+
+# remove environment file
+*.env
+
+*.lock
